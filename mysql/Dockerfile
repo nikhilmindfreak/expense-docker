@@ -1,5 +1,5 @@
 FROM mysql:8.0
-# not a human, only for system
+# not a human, only for system we use -r to create a sytem user
 RUN adduser -r expense
 ENV MYSQL_ROOT_PASSWORD=ExpenseApp@1 \
     MYSQL_USER=expense \

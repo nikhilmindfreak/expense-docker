@@ -12,11 +12,11 @@ services:
     #image: mysql:v1.0
     image: mysql:v1.0
     container_name: mysql # --name mysql
-    # environment:
-    #   # - MYSQL_ROOT_PASSWORD=ExpenseApp@1
-    #   # - MYSQL_USER=expense
-    #   # - MYSQL_PASSWORD=ExpenseApp@1
-    #   # - MYSQL_DATABASE=transactions
+    environment:  # we give env in run time to avoid to expose pass
+      - MYSQL_ROOT_PASSWORD=ExpenseApp@1
+      - MYSQL_USER=expense
+      - MYSQL_PASSWORD=ExpenseApp@1
+      - MYSQL_DATABASE=transactions
     volumes:
     - source: mysql
       target: /var/lib/mysql
